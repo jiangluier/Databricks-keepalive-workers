@@ -48,7 +48,7 @@ async function checkArgoDomain(argoDomain) {
     console.log(`ARGO域名 ${argoDomain} 状态码: ${statusCode}`);
     
     return {
-      online: statusCode === 404 || statusCode === 530,
+      online: statusCode === 404 || statusCode === 502,
       statusCode: statusCode,
       timestamp: new Date().toISOString()
     };
